@@ -1,0 +1,17 @@
+# Source brand files (large, and include private customer data)
+brand/
+*.zip
+*.ai
+*.psd
+*.xlsx
+*.docx
+
+# Internal drafts and tooling
+content/
+tools/
+.claude/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini

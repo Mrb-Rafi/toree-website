@@ -242,7 +242,8 @@ a { color: inherit; }
 .chapter h2 { margin: 0 0 1.4rem; font-weight: 400; display: flex; flex-direction: column; gap: .3rem; }
 .chapter h2 .num { font-family: var(--display); font-size: .8rem; letter-spacing: .24em; color: var(--accent); }
 .chapter h2 .title { font-family: var(--display); font-weight: 300; font-size: clamp(1.7rem, 1.3rem + 1.6vw, 2.5rem); line-height: 1.15; color: var(--green-800); letter-spacing: -.01em; }
-.chapter p { margin: 0 0 1.25em; }
+.chapter p { margin: 0 0 1.25em; text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.chapter p.short { text-align: left; hyphens: manual; -webkit-hyphens: manual; }
 .chapter p em { font-style: italic; }
 .chapter > p.drop::first-letter {
   font-family: var(--display); float: left; font-size: 3.6em; line-height: .86; padding: .06em .12em 0 0; color: var(--green-800); font-weight: 300;
@@ -286,7 +287,8 @@ body[data-story="abar-jigay"] { --accent: #d6336c; }
 ::view-transition-group(*) { animation-duration: .75s; animation-timing-function: cubic-bezier(.65, 0, .35, 1); }
 
 /* page-load sequence: lines rise from behind a mask, details follow, the main photo unveils */
-.line { display: block; overflow: hidden; padding-bottom: .1em; margin-bottom: -.1em; }
+/* the mask needs room above and below the type so tall glyphs (and Bangla vowel signs) are never clipped */
+.line { display: block; overflow: hidden; padding-block: .16em .14em; margin-block: -.16em -.14em; }
 .line > span { display: inline-block; animation: rise 1.1s var(--ease) both; animation-delay: calc(var(--i, 0) * 110ms + 120ms); }
 .intro { animation: fade-up 1s var(--ease) both; animation-delay: calc(var(--i, 0) * 110ms + 200ms); }
 .unveil { overflow: hidden; animation: unveil 1.5s cubic-bezier(.65, 0, .35, 1) both; animation-delay: .25s; }
@@ -347,6 +349,8 @@ body[data-story="abar-jigay"] { --accent: #d6336c; }
   .carry .bag { max-width: 420px; }
 }
 @media (max-width: 720px) {
+  :root { --gutter: 1.4rem; }
+  .section-head { row-gap: 1.2rem; }
   .nav-toggle { display: block; }
   .nav {
     position: absolute; top: 72px; left: 0; right: 0; flex-direction: column; align-items: flex-start; gap: 0;

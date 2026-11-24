@@ -205,8 +205,10 @@ a { color: inherit; }
 
 /* ---------- Order ---------- */
 .order { background: var(--paper); padding-block: clamp(4rem, 9vw, 8rem); text-align: center; }
-.order h2 { font-family: var(--display); font-weight: 300; font-size: clamp(2rem, 1.4rem + 2.6vw, 3.4rem); line-height: 1.1; color: var(--green-800); margin: .8rem auto 1.2rem; max-width: 20ch; letter-spacing: -.015em; }
-.order h2 em { font-weight: 500; }
+.lost-links { list-style: none; padding: 0; margin: 0 auto 2.4rem; display: grid; gap: .7rem; }
+.lost-links a { color: var(--green-800); text-underline-offset: .25em; }
+.order h1, .order h2 { font-family: var(--display); font-weight: 300; font-size: clamp(2rem, 1.4rem + 2.6vw, 3.4rem); line-height: 1.1; color: var(--green-800); margin: .8rem auto 1.2rem; max-width: 20ch; letter-spacing: -.015em; }
+.order h1 em, .order h2 em { font-weight: 500; }
 .order p { max-width: 32rem; margin: 0 auto 2.2rem; color: var(--ink-soft); }
 .order .actions { display: flex; flex-wrap: wrap; gap: .8rem; justify-content: center; }
 

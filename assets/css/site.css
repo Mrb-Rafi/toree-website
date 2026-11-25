@@ -133,12 +133,6 @@ a { color: inherit; }
     var(--cream-2);
   opacity: .9;
 }
-.chevrons.on-green {
-  background:
-    linear-gradient(135deg, var(--green-800) 25%, transparent 25%) -7px 0 / 14px 14px,
-    linear-gradient(225deg, var(--green-800) 25%, transparent 25%) -7px 0 / 14px 14px,
-    var(--green-900);
-}
 
 /* ---------- Home: manifesto ---------- */
 .manifesto { padding-block: clamp(4rem, 9vw, 8rem); background: var(--paper); text-align: center; }
@@ -180,13 +174,6 @@ a { color: inherit; }
 .story-card[data-accent="graphite"] { --accent: #3b3b3b; }
 .story-card[data-accent="red"] { --accent: #b3261e; }
 .story-card[data-accent="pink"] { --accent: #d6336c; }
-
-/* ---------- Home: band ---------- */
-.band { background: var(--green-800); color: var(--cream); padding-block: clamp(4rem, 8vw, 7rem); text-align: center; overflow: hidden; }
-.band h2 { font-family: var(--display); font-weight: 300; font-size: clamp(2rem, 1.3rem + 3vw, 3.8rem); line-height: 1.1; margin: .8rem 0 2.5rem; letter-spacing: -.015em; }
-.band h2 em { font-weight: 500; }
-.band .eyebrow { color: var(--green-500); }
-.band img { width: min(1100px, 100%); margin: 0 auto; }
 
 /* ---------- Craft ---------- */
 .craft { padding-block: clamp(4rem, 9vw, 8rem); }
